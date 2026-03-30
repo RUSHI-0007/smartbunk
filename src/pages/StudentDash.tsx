@@ -12,14 +12,14 @@ export const StudentDash = () => {
   return (
     <div className="space-y-8 animate-fade-in">
       {/* Hero Banner (Image 1 replica) */}
-      <div className="bg-gradient-to-r from-[#9B89C9] to-[#b1a2d6] rounded-[2rem] p-8 lg:p-12 text-white relative shadow-[0_20px_40px_-15px_rgba(155,137,201,0.5)] overflow-hidden">
+      <div className="bg-gradient-to-r from-[#9B89C9] to-[#b1a2d6] rounded-[2rem] p-6 md:p-8 lg:p-12 text-white relative shadow-[0_20px_40px_-15px_rgba(155,137,201,0.5)] overflow-hidden">
         <div className="absolute -left-32 -bottom-32 w-80 h-80 bg-white/10 rounded-full blur-3xl mix-blend-overlay"></div>
-        <div className="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+        <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div>
-            <div className="inline-block px-4 py-1.5 bg-white/20 rounded-full text-[11px] font-bold tracking-widest uppercase mb-5 border border-white/20 backdrop-blur-md">
+            <div className="inline-block px-4 py-1.5 bg-white/20 rounded-full text-[10px] md:text-[11px] font-bold tracking-widest uppercase mb-5 border border-white/20 backdrop-blur-md">
               SEMESTER {studentData.semester} · {studentData.branch}
             </div>
-            <h1 className="font-display text-4xl lg:text-5xl font-black mb-3 tracking-tight w-full leading-tight drop-shadow-md">
+            <h1 className="font-display text-4xl md:text-5xl xl:text-6xl font-black mb-3 tracking-tight w-full leading-tight drop-shadow-md">
               Welcome back, {studentData.name}!
             </h1>
             <p className="text-white/80 font-semibold flex items-center gap-2 text-sm mt-4">
@@ -65,20 +65,20 @@ export const StudentDash = () => {
       </div>
 
       {/* Alert Banner */}
-      <div className="bg-[#fff1f2] border border-[#fecdd3] rounded-2xl p-5 flex items-start md:items-center gap-4 shadow-sm relative overflow-hidden group">
-        <div className="absolute left-0 top-0 bottom-0 w-2 bg-danger"></div>
-        <div className="p-3 bg-danger/10 rounded-xl text-danger shrink-0 ml-2">
-          <AlertTriangle className="w-6 h-6" />
+      <div className="bg-[#fff1f2] border border-[#fecdd3] rounded-2xl p-4 md:p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4 shadow-sm relative overflow-hidden group">
+        <div className="hidden sm:block absolute left-0 top-0 bottom-0 w-2 bg-danger"></div>
+        <div className="p-3 bg-danger/10 rounded-xl text-danger shrink-0 sm:ml-2">
+          <AlertTriangle className="w-5 h-5 md:w-6 md:h-6" />
         </div>
         <div className="flex-1">
-          <h3 className="font-bold text-danger text-base">Defaulter Risk — Action Needed</h3>
-          <p className="text-slate-600 font-medium text-sm mt-1">
+          <h3 className="font-bold text-danger text-sm md:text-base">Defaulter Risk — Action Needed</h3>
+          <p className="text-slate-600 font-medium text-xs md:text-sm mt-1 leading-relaxed">
             Your <strong>Computer Organization (CS403)</strong> is at <strong>68%</strong>. Attend next {classesNeeded} lectures to recover to 75%.
           </p>
         </div>
         <button 
           onClick={() => navigate('/subject/cs403')}
-          className="px-5 py-2.5 bg-danger/90 text-white font-bold rounded-xl hover:bg-danger transition-colors shadow-md shadow-danger/20 text-sm whitespace-nowrap"
+          className="w-full sm:w-auto px-5 py-2.5 bg-danger/90 text-white font-bold rounded-xl hover:bg-danger transition-colors shadow-md shadow-danger/20 text-sm whitespace-nowrap mt-2 sm:mt-0"
         >
           Fix Now
         </button>

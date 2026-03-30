@@ -65,7 +65,7 @@ export const Chatbot = () => {
     <>
       {/* Floating Button container mapping to the robot head */}
       <div 
-        className={`fixed bottom-8 right-8 z-50 flex flex-col items-center transition-all duration-300 ${isOpen ? 'scale-0 opacity-0 pointer-events-none' : 'scale-100 opacity-100'}`}
+        className={`fixed bottom-28 lg:bottom-8 right-5 lg:right-8 z-50 flex flex-col items-center transition-all duration-300 ${isOpen ? 'scale-0 opacity-0 pointer-events-none' : 'scale-100 opacity-100'}`}
       >
         <button
           onClick={() => setIsOpen(true)}
@@ -77,7 +77,7 @@ export const Chatbot = () => {
 
       {/* Chat Window Base: Light UI matching main portal */}
       <div 
-        className={`fixed bottom-8 right-8 w-[380px] max-w-[calc(100vw-2rem)] bg-white rounded-[24px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-slate-100 flex flex-col z-50 transition-all duration-500 origin-bottom-right overflow-hidden ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}
+        className={`fixed bottom-[110px] lg:bottom-8 right-4 lg:right-8 w-[92vw] lg:w-[380px] max-w-[400px] bg-white rounded-[24px] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] border border-slate-100 flex flex-col z-50 transition-all duration-500 origin-bottom-right overflow-hidden ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-primary to-accent p-5 text-white flex justify-between items-start">

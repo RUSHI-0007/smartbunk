@@ -49,29 +49,35 @@ export const Timetable = () => {
         </div>
       </div>
 
-      <div className="bg-white rounded-[2rem] p-8 lg:p-12 border border-slate-100 shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
-        <div className="grid grid-cols-7 gap-4 mb-6">
+      <div className="bg-white rounded-[2rem] p-5 md:p-8 lg:p-12 border border-slate-100 shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+        <div className="grid grid-cols-7 gap-2 md:gap-4 mb-4 md:mb-6">
           {days.map(day => (
-            <div key={day} className="text-center text-[10px] font-black text-slate-400 uppercase tracking-widest">
+            <div key={day} className="text-center text-[8px] sm:text-[10px] font-black text-slate-400 uppercase tracking-widest hidden sm:block">
               {day}
             </div>
           ))}
+          {/* Mobile Abbreviated Days */}
+          {days.map(day => (
+            <div key={`${day}-mobile`} className="text-center text-[9px] font-black text-slate-400 uppercase tracking-widest block sm:hidden">
+              {day.charAt(0)}
+            </div>
+          ))}
         </div>
-        <div className="grid grid-cols-7 gap-3 lg:gap-4">
+        <div className="grid grid-cols-7 gap-1.5 sm:gap-3 lg:gap-4">
           {calendarData.map(({ date, status }) => (
             <div 
               key={date} 
-              className={`aspect-square rounded-[1.5rem] flex flex-col items-center justify-center transition-all duration-300 hover:scale-[1.05] cursor-pointer ${getDayStyle(status, date)}`}
+              className={`aspect-square rounded-xl sm:rounded-[1.5rem] flex flex-col items-center justify-center transition-all duration-300 hover:scale-[1.05] cursor-pointer ${getDayStyle(status, date)}`}
             >
-              <span className="text-lg lg:text-xl font-display">{date}</span>
-              {date === 30 && <span className="text-[8px] font-black uppercase tracking-widest mt-1">Today</span>}
+              <span className="text-sm sm:text-lg lg:text-xl font-display">{date}</span>
+              {date === 30 && <span className="text-[6px] sm:text-[8px] font-black uppercase tracking-widest mt-0.5 sm:mt-1">Today</span>}
             </div>
           ))}
         </div>
       </div>
 
       {/* Stats row */}
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
         {[
           { color: 'text-accent', bg: 'bg-accent/10', count: 14, label: 'Present Days' },
           { color: 'text-danger', bg: 'bg-danger/10', count: 3, label: 'Absent Days' },
