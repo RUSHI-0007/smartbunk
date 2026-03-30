@@ -14,7 +14,7 @@ export const Landing = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 relative overflow-hidden flex flex-col items-center justify-center p-6 selection:bg-primary selection:text-white">
+    <div className="min-h-[100dvh] bg-slate-50 relative overflow-x-hidden overflow-y-auto flex flex-col items-center justify-center p-6 py-12 selection:bg-primary selection:text-white">
       {/* Animated Blobs Background */}
       <div className="fixed top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-primary/20 rounded-full mix-blend-multiply blur-3xl opacity-60 animate-blob z-0 pointer-events-none"></div>
       <div className="fixed top-[20%] right-[-10%] w-[35rem] h-[35rem] bg-accent/20 rounded-full mix-blend-multiply blur-3xl opacity-60 animate-blob z-0 pointer-events-none" style={{ animationDelay: '3s' }}></div>
