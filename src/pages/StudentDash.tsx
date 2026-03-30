@@ -16,10 +16,10 @@ export const StudentDash = () => {
         <div className="absolute -left-32 -bottom-32 w-80 h-80 bg-white/10 rounded-full blur-3xl mix-blend-overlay"></div>
         <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div>
-            <div className="inline-block px-4 py-1.5 bg-white/20 rounded-full text-[10px] md:text-[11px] font-bold tracking-widest uppercase mb-5 border border-white/20 backdrop-blur-md">
+            <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-[9px] md:text-[11px] font-bold tracking-widest uppercase mb-3 border border-white/20 backdrop-blur-md">
               SEMESTER {studentData.semester} · {studentData.branch}
             </div>
-            <h1 className="font-display text-4xl md:text-5xl xl:text-6xl font-black mb-3 tracking-tight w-full leading-tight drop-shadow-md">
+            <h1 className="font-display text-2xl md:text-4xl xl:text-6xl font-black mb-2 tracking-tight w-full leading-tight drop-shadow-md">
               Welcome back, {studentData.name}!
             </h1>
             <p className="text-white/80 font-semibold flex items-center gap-2 text-sm mt-4">
@@ -27,19 +27,19 @@ export const StudentDash = () => {
             </p>
           </div>
           
-          <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-3xl p-6 min-w-[280px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] shrink-0">
+          <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-4 md:p-6 w-full md:min-w-[260px] md:max-w-[300px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] shrink-0">
             <div className="flex justify-between items-center mb-1">
-              <span className="text-[10px] font-black text-white/90 uppercase tracking-widest">Overall Attendance</span>
-              <ShieldCheck className="w-5 h-5 text-accent/80" />
+              <span className="text-[9px] md:text-[10px] font-black text-white/90 uppercase tracking-widest">Overall Attendance</span>
+              <ShieldCheck className="w-4 h-4 text-accent/80" />
             </div>
-            <div className="flex items-baseline gap-1.5 mb-2 mt-2">
-              <span className="font-display text-5xl font-black tracking-tighter">{studentData.overallAttendance}</span>
-              <span className="text-2xl font-bold text-white/70">%</span>
+            <div className="flex items-baseline gap-1 mb-2 mt-1">
+              <span className="font-display text-4xl md:text-5xl font-black tracking-tighter">{studentData.overallAttendance}</span>
+              <span className="text-xl font-bold text-white/70">%</span>
             </div>
-            <div className="w-full bg-black/20 rounded-full h-2 mb-2 overflow-hidden shadow-inner">
+            <div className="w-full bg-black/20 rounded-full h-1.5 mb-2 overflow-hidden shadow-inner">
               <div className="bg-accent h-full rounded-full transition-all duration-1000" style={{ width: `${studentData.overallAttendance}%` }}></div>
             </div>
-            <p className="text-[10px] text-white/80 font-bold uppercase tracking-wider">Safe Zone ✓ — Keep it up!</p>
+            <p className="text-[9px] text-white/80 font-bold uppercase tracking-wider">Safe Zone ✓ — Keep it up!</p>
           </div>
         </div>
       </div>

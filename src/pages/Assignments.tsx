@@ -8,16 +8,16 @@ export const Assignments = () => {
   const completionRate = Math.round((completed.length / studentData.assignments.length) * 100) || 0;
 
   return (
-    <div className="space-y-8 animate-fade-in max-w-6xl">
-      <div className="flex justify-between items-start mb-10">
-        <div>
-          <h1 className="font-display text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight leading-tight mb-2">Assignments Workspace</h1>
-          <p className="text-sm font-bold text-slate-500 tracking-wider">
+    <div className="space-y-6 animate-fade-in max-w-6xl">
+      <div className="flex justify-between items-start gap-3 mb-6">
+        <div className="min-w-0">
+          <h1 className="font-display text-2xl md:text-4xl font-extrabold text-slate-800 tracking-tight leading-tight mb-1">Assignments Workspace</h1>
+          <p className="text-xs md:text-sm font-bold text-slate-500 tracking-wider">
             Manage your programming and theory submissions.
           </p>
         </div>
-        <button className="bg-slate-900 text-white px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-slate-800 transition-colors shadow-sm">
-          <Plus className="w-4 h-4" /> New Task
+        <button className="bg-slate-900 text-white px-3 md:px-5 py-2.5 rounded-xl text-xs md:text-sm font-bold flex items-center gap-1.5 hover:bg-slate-800 transition-colors shadow-sm shrink-0 whitespace-nowrap">
+          <Plus className="w-3.5 h-3.5 md:w-4 md:h-4" /> <span className="hidden xs:inline">New</span> Task
         </button>
       </div>
 
