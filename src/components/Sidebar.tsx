@@ -14,7 +14,7 @@ export const Sidebar = () => {
   ];
 
   return (
-    <div className="w-72 h-screen bg-white hidden lg:flex flex-col justify-between py-8 px-6 border-r border-slate-100 shadow-[4px_0_24px_rgba(0,0,0,0.02)] fixed left-0 top-0">
+    <div className="w-72 h-screen bg-white hidden lg:flex flex-col justify-between py-8 px-6 border-r border-slate-100 shadow-[4px_0_24px_rgba(0,0,0,0.02)] fixed left-0 top-0 overflow-y-auto">
       <div>
         {/* Logo */}
         <div className="flex items-center gap-3 mb-10 pl-2">
