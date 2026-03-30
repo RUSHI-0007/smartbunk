@@ -104,18 +104,18 @@ export const StudentDash = () => {
             
             return (
               <div key={subject.id} className={`bg-white rounded-3xl p-6 lg:p-8 flex flex-col justify-between cursor-pointer hover:shadow-xl transition-shadow border-t-[3px] border-l border-r border-b ${isCritical ? 'border-t-warning shadow-warning/5' : 'border-t-accent shadow-accent/5'}`}>
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex gap-4 items-start">
-                    <div className={`p-1.5 rounded-full border-2 ${isCritical ? 'border-warning text-warning bg-warning/5' : 'border-accent text-accent bg-accent/5'} mt-1`}>
+                <div className="flex justify-between items-start mb-6 gap-2">
+                  <div className="flex gap-3 items-start flex-1 min-w-0 pr-2">
+                    <div className={`p-1.5 shrink-0 rounded-full border-2 ${isCritical ? 'border-warning text-warning bg-warning/5' : 'border-accent text-accent bg-accent/5'} mt-1`}>
                       <ShieldCheck className="w-4 h-4" />
                     </div>
-                    <div>
-                      <h3 className="font-display font-extrabold text-xl lg:text-2xl text-slate-800 leading-tight mb-1">{subject.name}</h3>
-                      <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{subject.code} · {subject.type}</p>
+                    <div className="min-w-0">
+                      <h3 className="font-display font-extrabold text-lg lg:text-2xl text-slate-800 leading-tight mb-1 whitespace-pre-wrap">{subject.name}</h3>
+                      <p className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase tracking-widest truncate">{subject.code} · {subject.type}</p>
                     </div>
                   </div>
-                  <span className={`font-display text-4xl lg:text-5xl font-black tracking-tighter ${primaryColor}`}>
-                    {pct}<span className="text-2xl">%</span>
+                  <span className={`font-display text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter shrink-0 ${primaryColor}`}>
+                    {pct}<span className="text-xl sm:text-2xl">%</span>
                   </span>
                 </div>
                 

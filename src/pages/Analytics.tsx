@@ -20,15 +20,15 @@ export const Analytics = () => {
 
   return (
     <div className="space-y-8 animate-fade-in max-w-7xl">
-      <div className="flex justify-between items-start">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-2">
         <div>
-          <h1 className="font-display text-4xl font-extrabold text-slate-800 tracking-tight mb-2">Analytics & Predictions</h1>
-          <p className="text-sm font-bold text-slate-500 tracking-wider">
+          <h1 className="font-display text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight leading-[1.1] mb-2">Analytics & Predictions</h1>
+          <p className="text-xs md:text-sm font-bold text-slate-500 tracking-wider">
             SEMESTER {studentData.semester} · {studentData.branch.toUpperCase()} · {studentData.university}
           </p>
         </div>
-        <div className="bg-warning/10 border border-warning/20 text-warning px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 shadow-sm">
-          <AlertCircle className="w-4 h-4" /> {atRiskSubjects.length} subjects at risk
+        <div className="bg-warning/10 border border-warning/20 text-warning px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 shadow-sm shrink-0 w-full md:w-auto">
+          <AlertCircle className="w-4 h-4 shrink-0" /> <span className="truncate">{atRiskSubjects.length} subjects at risk</span>
         </div>
       </div>
 

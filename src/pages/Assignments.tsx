@@ -11,7 +11,7 @@ export const Assignments = () => {
     <div className="space-y-8 animate-fade-in max-w-6xl">
       <div className="flex justify-between items-start mb-10">
         <div>
-          <h1 className="font-display text-4xl font-extrabold text-slate-800 tracking-tight mb-2">Assignments Workspace</h1>
+          <h1 className="font-display text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight leading-tight mb-2">Assignments Workspace</h1>
           <p className="text-sm font-bold text-slate-500 tracking-wider">
             Manage your programming and theory submissions.
           </p>
